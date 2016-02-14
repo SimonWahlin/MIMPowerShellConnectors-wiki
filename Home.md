@@ -4,7 +4,7 @@ The MIM PowerShell Connectors projects aims to be a repository of Management Age
 
 # Connectors
 
- * Skype / Lync
+ * [Skype / Lync][LyncConnector]
 	 * Support extensive management of Users in Skype 2015, Lync 2013 and Lync 2010.
 	 * To be used in conjuction with Active Directory MA
 	 * Support PowerShell 2.0 and above
@@ -34,3 +34,5 @@ For more details and information on utilizing the MIM PowerShell Connectors plea
 # Contributing to MIM PowerShell Connectors
 
 For details on how you can contribute, please check [CONTRIBUTING.md](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/CONTRIBUTING.md)
+
+[LyncConnector]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Lync-Connector

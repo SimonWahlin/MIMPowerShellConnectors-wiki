@@ -12,8 +12,8 @@
 * [FAQ][FAQ]
 
 [Home]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki
-[LyncConnector]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector
-[LyncConnectorConfiguration]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector-Configuration
-[LyncConnectorTroubleshooting]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector-Troubleshooting
-[LyncConnectorCommonConfigurationErrors]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector-CommonConfigErrors
+[LyncConnector]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Lync-Connector
+[LyncConnectorConfiguration]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Lync-Connector-Configuration
+[LyncConnectorTroubleshooting]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Lync-Connector-Troubleshooting
+[LyncConnectorCommonConfigurationErrors]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Lync-Connector-Common-Config-Errors
 [FAQ]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/FAQ
