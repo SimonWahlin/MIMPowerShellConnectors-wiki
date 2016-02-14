@@ -9,6 +9,11 @@ The MIM PowerShell Connectors projects aims to be a repository of Management Age
 	 * To be used in conjuction with Active Directory MA
 	 * Support PowerShell 2.0 and above
 	 * Supports Delta Import and (Delta) Export
+ * Flat File Connector (Coming soon...)
+ * Office365 Licensing Connector (Coming soon...)
+ * SharePoint Site, User and Group Management Connector (Coming soon...)
+ * Home Drive Provisioning (Coming soon...)
+ * Oracle Identity Management Connector (Coming soon...)
 
 # Supported Product Versions
 

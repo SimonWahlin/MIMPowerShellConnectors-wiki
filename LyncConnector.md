@@ -10,4 +10,4 @@ The primary function of of the Lync Connector is to enable, disable users in Sky
 [LyncConnectorDesign]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector-Design
 [LyncConnectorConfiguration]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector-Configuration
 [LyncConnectorTroubleshooting]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector-Troubleshooting
-[LyncConnectorCommonConfigurationErrors]: https://github.com/Microsoft/
+[LyncConnectorCommonConfigurationErrors]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/LyncConnector-CommonConfigErrors

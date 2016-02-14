@@ -6,6 +6,32 @@ The following diagram illustrates the conceptual architecture of the Lync Connec
 
 As depicted in the preceding diagram, the Lync Connector uses remote PowerShell to invoke various Lync command-lets to perform desired provisioning tasks in the Lync Sever.
 
+### Connector Capabilities
+
+Settings|Configuration|
+--------|-------------|
+Distinguished Name Style|Ldap|
+Export Type|AttributeUpdate|
+Data Normalization|None|
+Object Confirmation|NoAddAndDeleteConfirmation|
+Use DN As Anchor (Only LDAP style DN)|No|
+Concurrent Operations Of Several Connectors|Yes|
+Partitions (Only LDAP style DN)|Yes|
+Hierarchy (Only LDAP style DN)|Yes|
+Enable Import|Yes|
+Enable Delta Import|Yes|
+Enable Export|Yes|
+Enable Full Export|No|
+No Reference Values In First Export Pass|Yes|
+Enable Object Rename|Yes|
+Delete-Add As Replace|Yes|
+Enable Password operations|No|
+Enable Export Password In First Pass|No|
+
+> **Note** : Delta Import is based on the "WhenChanged" attribute which is neither replicated not indexed. Since it is not replicated, connector fetch all objects modified since T – LastRunDateTimeOffsetMinutes. The default value for LastRunDateTimeOffsetMinutes additional configuration parameter is 30 minutes. Even though the "WhenChanged" attribute is not indexed, it has been found to provides good performance gain during Delta Import.
+>
+> Any deletion directly in Lync / AD will not be detected in Delta Import. A periodic Full import is needed to flush out any external deletes from the connector space. Another approach that may be adopted is that since this connector is meant to be used in conjunction with AD MA, the deletions detected in AD MA can be used to trigger deletions in this Connector as well.
+
 ### Connector Space Design
 
 The Lync Connector connector space defines two object type: `OrganizationalUnit` and `User`. The schema for the User object type is defined in the following table:
