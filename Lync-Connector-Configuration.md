@@ -149,6 +149,8 @@ LastRunDateTimeOffsetMinutes|Leave Blank OR specify a value based on the estimat
 
 * From here on, rest of the pages of the wizard need to be configured as per your solution requirements.
 
+* Once the MA is configured, configure the MA Run Profiles for each domain partition in the connected forest. 
+
 ### Lync Provisioning
 
 The Lync Connector uses Active Directory DN of the User objects as the "Identity" of the user in Lync. The Lync Connector also assumes that you already have the ADDS MA configured to provision users in the ADDS forest. The users need to exist in the ADDS forest first before the Lync connector can provision them in Lync.
@@ -198,3 +200,153 @@ private static void ProvisionLyncUser(MVEntry mventry)
 ```
 
 > **Note**: The above sample code assumes that you have extended the metaverse schema with an attribute **xActiveDirectoryDN** of type string (index) and configured an import flow for it on the AD MA so that the it gets populated from the DN value from AD.
+
+#### Provisioning Using Declarative Provisioning
+
+When you configure an outbound synchronization rule, you need to configure an initial flow for the DN attribute. You can define the Outbound System Scoping filter such that only the users confirmed to an Active Directory account are provisioned in Lync connector space. A sample OSR is demonstrated below:
+
+<table>
+    <tr>
+        <td colspan="4"><b>Synchronization Rule: </b>!Skype: Entitled Users OSR</td>
+    </tr>
+    <tr>
+        <td colspan="4"><b>General</b></td>
+    </tr>
+    <tr>
+        <td><b>Display Name</b></td>
+        <td colspan="3">!Skype: Entitled Users OSR</td>
+    </tr>
+    <tr>
+        <td><b>Description</b></td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td><b>Dependency</b></td>
+        <td colspan="3"></td>
+    </tr>
+    <tr>
+        <td><b>Data Flow Direction</b></td>
+        <td colspan="3">Outbound</td>
+    </tr>
+    <tr>
+        <td><b>Apply Rule</b></td>
+        <td colspan="3">Filter-based Outbound Synchronization</td>
+    </tr>
+    <tr>
+        <td colspan="4"><b>Scope</b></td>
+    </tr>
+    <tr>
+        <td><b>Metaverse Resource Type</b></td>
+        <td colspan="3">person</td>
+    </tr>
+    <tr>
+        <td><b>External System</b></td>
+        <td colspan="3">Skype</td>
+    </tr>
+    <tr>
+        <td><b>External System Resource Type</b></td>
+        <td colspan="3">User</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><b>Outbound System Scoping Filter</b></td>
+        <td><b>Attribute<b></td>
+        <td><b>Operator<b></td>
+        <td><b>Value<b></td>
+    </tr>
+    <tr>
+        <td>xSkypeEntitlement</td>
+        <td>EQUAL</td>
+        <td>Active</td>
+    </tr>
+    <tr>
+        <td>xActiveDirectoryDN</td>
+        <td>NOTEQUAL</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="4"><b>Relationship</b></td>
+    </tr>
+    <tr>
+        <td><b>Create Resource In External System</b></td>
+        <td colspan="3">True</td>
+    </tr>
+    <tr>
+        <td colspan="4"><b>Outbound Attribute Flow</b></td>
+    </tr>
+    <tr>
+        <td><b>Initial Flow Only</b></td>
+        <td><b>Use as Existence Test</b></td>
+        <td><b>Allow Null</b></td>
+        <td><b>Flow(FIM Value => Destination Attribute)</b></td>
+    </tr>
+    <tr>
+        <td>True</td>
+        <td>False</td>
+        <td>False</td>
+        <td>xActiveDirectoryDN → dn</td>
+    </tr>
+    <tr>
+        <td>False</td>
+        <td>False</td>
+        <td>False</td>
+        <td>pool1.contoso.com → RegistrarPool</td>
+    </tr>
+    <tr>
+        <td>False</td>
+        <td>False</td>
+        <td>False</td>
+        <td>CustomExpression(IIF(Eq(xSkypeEntitlement,"Active"),"true","false"))  → Enabled</td>
+    </tr>
+</table>
+
+### Lync Connector Customization
+
+#### SIP Address
+
+If the connector space User object of Lync Connector does not have the "SipAddress" attribute populated, the Lync connector will instruct Lync Server to auto-generate the SIP address based on the data specified in the SipAddressType / SipDomain "Additional Config Parameter" configuration.
+ 
+* To have the SIP address auto-generated as the user's first name and a period followed by the user's last name and the SIP domain, use:
+
+Additional Config Parameter Name|Configuration|
+--------------------------------|-------------|
+SipAddressType|FirstLastName|
+SipDomain|contoso.com|
+
+* To have the SIP address auto-generated as the user's email address, use:
+
+Additional Config Parameter Name|Configuration|
+--------------------------------|-------------|
+SipAddressType|EmailAddress|
+
+* To have the SIP address auto-generated as the user's UPN, use:
+
+Additional Config Parameter Name|Configuration|
+--------------------------------|-------------|
+SipAddressType|UserPrincipalName|
+
+* To have the SIP address auto-generated as the user's SamAccountName (logon name) use:
+
+Additional Config Parameter Name|Configuration|
+--------------------------------|-------------|
+SipAddressType|SamAccountName|
+SipDomain|contoso.com|
+
+#### Force Move
+
+When you move a user to a new Registrar pool, you can choose what happens to the associated user data (such as conferences that the user has scheduled). By fault, both the account and the associated data are moved. To delete any associated data during move, use:
+
+Additional Config Parameter Name|Configuration|
+--------------------------------|-------------|
+ForceMove|Yes|
+
+#### Paging Filter
+
+During Import Operation, the Lync Connector fetched user in batches based on the first character of their SIP address. All users starting their SIP address with character "a" are fetched first, then those with their SIP address with character "b", and so on.
+ 
+If there are users starting their SIP address with any character other than a to z and 0 to 9, you can modify the "pages" array by specifying those additional characters in UserPages_Global configuration parameter.
+ 
+You can also modify this parameter, if any of the pages return more than batch size defined on the Import Run Profile.
+
+#### Preferred Domain Controller
+
+The configuration parameter PreferredDomainControllerFQDN enables you to connect to the specified domain controller when running Lync cmdlets that support “DomainController” parameter. Specify the same list (comma separated) of Domain Controllers in the same order as used by AD MA to avoid AD replication delays. During every export run, the connector will go thru the preferred domain controller list and select the first online domain controller. If the list is not configured, the DC automatically used by the Lync cmdlets is the one what is close to the Lync server (and not FIM Synchronization server).
