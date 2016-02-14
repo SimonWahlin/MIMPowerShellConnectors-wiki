@@ -20,18 +20,19 @@ You have two options to create the management agent. 1. Create a new management 
 
 To Import Lync connector for the MA export config file,
 
-1. Ensure that you have installed FIM PowerShell Connector.
+* Ensure that you have installed FIM PowerShell Connector.
 
-2. Ensure that **Schema-Lync.xml** is copied to the **<FIM_INSTALLDIR>\2010\Synchronization Service\Extensions** folder.
+* Ensure that **Schema-Lync.xml** is copied to the **<FIM_INSTALLDIR>\2010\Synchronization Service\Extensions** folder.
 
-3. In the **Synchronization Service Manager**, on **Management Agents** tab in **Actions** pane, click **Import Management Agent**.
+* In the **Synchronization Service Manager**, on **Management Agents** tab in **Actions** pane, click **Import Management Agent**.
 
-4. Browse to the folder where you downloaded **LyncConnectorConfigExport.xml** and open the file. This will launch the **Create Management Agent** wizard.
+* Browse to the folder where you downloaded **LyncConnectorConfigExport.xml** and open the file. This will launch the **Create Management Agent** wizard.
 
-5. On the **Create Management Agent** page, type a suitable name for the management agent.
+* On the **Create Management Agent** page, type a suitable name for the management agent.
 
 ![Lync Connector - Create Management Agent](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page1.png)
-6. On the **Connectivity** page, enter the following details:
+
+* On the **Connectivity** page, enter the following details:
 
 Settings|Configuration|
 --------|-------------|
@@ -55,7 +56,8 @@ Additional Encrypted Config Parameter Names|-|
 ![Lync Connector - Connectivity](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page2b.png)
 
 ![Lync Connector - Connectivity](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page2c.png)
-7. On the **Capabilities** page, specify the following details:
+
+* On the **Capabilities** page, specify the following details:
 
 Settings|Configuration|
 --------|-------------|
@@ -85,7 +87,7 @@ Enable Export Password In First Pass|Unchecked|
 >
 > Any deletion directly in Lync / AD will not be detected in Delta Import. A periodic Full import is needed to flush out any external deletes from the connector space. Another approach that may be adopted is that since this connector is meant to be used in conjunction with AD MA, the deletions detected in AD MA can be used to trigger deletions in this Connector as well.
 
-8. On the **Global Parameters** page, specify the following details:
+* On the **Global Parameters** page, specify the following details:
 
 Settings|Configuration|
 --------|-------------|
@@ -117,31 +119,32 @@ LastRunDateTimeOffsetMinutes|Leave Blank OR specify a value based on the estimat
 ![Lync Connector - Global Parameters](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page4d.png)
 
 > **Note**: The connector scripts will prioritize the most specific configuration and use it when provided. The configuration is prioritize the configuration value in the following descending order:
-	1. RunStep
-	2. Partition
-	3. Global
+>	1. RunStep
+>	2. Partition
+>	3. Global
+>	
 > As an example, the configuration value specified for PreferredDomainControllerFQDN_Partition will be used to connect to specified partition. If no value is specified for a partition, PreferredDomainControllerFQDN_Global will be used.
 
-9. On the **Configure Provisioning Hierarchy** page, map DN Component **Ou** to  Directory ObjectClass **OrganizationalUnit**:
+* On the **Configure Provisioning Hierarchy** page, map DN Component **Ou** to  Directory ObjectClass **OrganizationalUnit**:
 
 ![Lync Connector - Configure Provisioning Hierarchy](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page5.png)
 
-11. On the **Configure Partitions and Hierarchies** page, select the directory partitions and containers where users are located:
+* On the **Configure Partitions and Hierarchies** page, select the directory partitions and containers where users are located:
 
 ![Lync Connector - Configure Partitions and Hierarchies](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page6.png)
 
 ![Lync Connector - Configure Partitions and Hierarchies](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page6b.png)
 
-12. On the **Select Object Types** page, select OrganizationalUnit and User:
+* On the **Select Object Types** page, select OrganizationalUnit and User:
 
 ![Lync Connector - Select Object Types](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page7.png)
 
-13. On the **Select Attributes** page, select all attributes (of interest):
+* On the **Select Attributes** page, select all attributes (of interest):
 
 ![Lync Connector - Select Attributes](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page8.png)
 
-14. On the **Configure Anchors** page, click Next:
+* On the **Configure Anchors** page, click Next:
 
 ![Lync Connector - Configure Anchors](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page9.png)
 
-15. From here on, rest of the pages of the wizard need to be configured as per your solution requirements.
+* From here on, rest of the pages of the wizard need to be configured as per your solution requirements.
