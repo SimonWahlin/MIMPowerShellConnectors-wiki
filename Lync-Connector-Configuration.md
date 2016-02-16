@@ -254,11 +254,6 @@ When you configure an outbound synchronization rule, you need to configure an in
         <td><b>Value<b></td>
     </tr>
     <tr>
-        <td>xSkypeEntitlement</td>
-        <td>EQUAL</td>
-        <td>Active</td>
-    </tr>
-    <tr>
         <td>xActiveDirectoryDN</td>
         <td>NOTEQUAL</td>
         <td></td>
@@ -295,9 +290,12 @@ When you configure an outbound synchronization rule, you need to configure an in
         <td>False</td>
         <td>False</td>
         <td>False</td>
-        <td>CustomExpression(IIF(Eq(xSkypeEntitlement,"Active"),"true","false"))  → Enabled</td>
+        <td>CustomExpression(IIF(Eq(xSkypeEntitlement,"Active"),"true","false" → Enabled</td>
     </tr>
 </table>
+
+> **Note**: The above sample code assumes that you have extended the metaverse schema with an attribute **xActiveDirectoryDN** of type string (index) and an attribute **xSkypeEntitlement** of type boolean. The **xActiveDirectoryDN** attrbute is configured an import flow for it on the AD MA so that the it gets populated from the DN value from AD.
+
 
 ### Lync Connector Customization
 

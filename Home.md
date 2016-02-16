@@ -5,9 +5,7 @@ The MIM PowerShell Connectors projects aims to be a repository of Management Age
 # Connectors
 
  * [Skype / Lync][LyncConnector]
-	 * Support extensive management of Users in Skype 2015, Lync 2013 and Lync 2010.
-	 * To be used in conjuction with Active Directory MA
-	 * Support PowerShell 2.0 and above
+	 * Supports management of users and policy assignments in Skype 2015, Lync 2013 and Lync 2010.
 	 * Supports Delta Import and (Delta) Export
  * Flat File Connector (Coming soon...)
  * Office365 Licensing Connector (Coming soon...)
