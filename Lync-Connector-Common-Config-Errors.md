@@ -12,4 +12,8 @@ Another reason for this error might be that the connector is configured to auto-
 
 If you have an Export run profile set to drop an audit log file, the Export run profile will encounter **unexpected-error** when exporting the objects. Modify the Export run profile not to generate an audit log file.
 
+#### Unable to retrieve schema
+
+If you get an error message saying *"Unable to retrieve schema. Error: An anchor attribute defined by the extension must not be of type Reference or Boolean..."*, make sure that you have copied the **Schema-Lync.xml** file in the *Synchronization Service\Extensions* of FIM Sync Server.
+
 
