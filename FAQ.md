@@ -8,6 +8,10 @@
 * [Where is technical documentation for MIMPowerShellConnectors?](#where-is-technical-documentation-for-mimpowershellconnectors)
 
 
+#### Deployment
+* [Where can I download the latest release of MIMPowerShellConnectors?](#where-can-i-download-the-latest-release-of-mimpowershellconnectors)
+
+
 #### Project
 * [How do I report MIMPowerShellConnectors bugs or feature requests?](#how-do-i-report-mimpowershellconnectors-bugs-or-feature-requests)
 * [How can I contribute code or wiki entries to MIMPowerShellConnectors?](#how-can-i-contribute-code-or-wiki-entries-to-mimpowershellconnectors)
@@ -31,8 +35,15 @@ Developer support is primarily via the Issue Log on this site.
 ### Usage
 
 ##### Where is technical documentation for MIMPowerShellConnectors?
-Documentation, scenarios, examples, implementation as well as troubleshooting guidance can be found on the [MIMPowerShellConnectors Wiki](http://aka.ms/MIMPowerShellConnectors/Wiki)
+Documentation, scenarios, examples, implementation as well as troubleshooting guidance can be found on the [MIMPowerShellConnectors Wiki](https://github.com/Microsoft/MIMPowerShellConnectors/Wiki)
 
+***
+
+### Deployment
+
+#### Where can I download the latest release of MIMPowerShellConnectors?
+
+The MIM PowerShell Connector releases can be downloaded from the [releases](https://github.com/Microsoft/MIMPowerShellConnectors/releases) tab under the Code tab.
 
 ***
 
