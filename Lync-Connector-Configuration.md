@@ -18,6 +18,8 @@ The connector space schema for the Lync Connector is defined in the **Schema-Lyn
 
 You have two options to create the management agent. 1. Create a new management agent from scratch or 2. Import the management agent from the MA export config file. Both the options lead of an identical configuration wizard with the only major difference being in the second option the configuration is pre-populated.
 
+> **Important**: While it is recommended that you import the management agent from the MA export config file, please copy and paste all the script from the source code zip as the content in the export file may not be up-to-date.
+
 To Import Lync connector for the MA export config file,
 
 * Ensure that you have installed FIM PowerShell Connector.
