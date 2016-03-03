@@ -21,7 +21,7 @@
 ### General
 
 ##### What is MIMPowerShellConnectors?
-The MIM PowerShell Connectors projects aims to be a repository of Management Agents / Connectors based on [Forefront Identity Manager Connector for PowerShell](http://go.microsoft.com/fwlink/?LinkId=393056) for the Microsoft Identity Manager (MIM) 2016 and Forefront Identity Manager (FIM) 2010 R2 solution.
+The MIM PowerShell Connectors projects aims to be a repository of Management Agents / Connectors based on [Forefront Identity Manager Connector for PowerShell](http://go.microsoft.com/fwlink/?LinkId=393056) for the Microsoft Identity Manager (MIM) 2016 and Forefront Identity Manager (FIM) 2010 R2 solution. The latest hotfix rollup as of Feb 2016  is build [1.0.419.911](https://support.microsoft.com/en-us/kb/3008179).
  
 ##### How is MIMPowerShellConnectors licensed?
 The MIMPowerShellConnectors is published under the MIT License. See the MIMPowerShellConnectors project's [License.txt](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/LICENSE.txt) for more information.
