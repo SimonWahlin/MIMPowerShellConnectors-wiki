@@ -29,9 +29,9 @@ To Import Lync connector for the MA export config file,
 * Ensure that the connector service account can access Lync Admin server Remote PowerShell url. A sample script that can be executed on a PowerShell command prompt to test connectivity is listed below:
 ```PowerShell
 $server = "https://s4badmin.contoso.com/OcsPowerShell" # the endpoint typically is on HTTPS
-$Credential = Get-Credential -Credential CONTOSO\svc_fim_s4bma
+$credential = Get-Credential -Credential CONTOSO\svc_fim_s4bma
 $skipCertificate = New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck
-$session = New-PSSession -ConnectionUri $server -Credential $Credential -SessionOption $skipCertificate 
+$session = New-PSSession -ConnectionUri $server -Credential $credential -SessionOption $skipCertificate 
 ```
 * In the **Synchronization Service Manager**, on **Management Agents** tab in **Actions** pane, click **Import Management Agent**.
 
