@@ -26,6 +26,13 @@ To Import Lync connector for the MA export config file,
 
 * Ensure that **Schema-Lync.xml** is copied to the **<FIM_INSTALLDIR>\2010\Synchronization Service\Extensions** folder.
 
+* Ensure that the connector service account can access Lync Admin server Remote PowerShell url. A sample script that can be executed on a PowerShell command prompt to test connectivity is listed below:
+```PowerShell
+$server = "https://s4badmin.contoso.com/OcsPowerShell" # the endpoint typically is on HTTPS
+$Credential = Get-Credential -Credential CONTOSO\svc_fim_s4bma
+$skipCertificate = New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck
+$session = New-PSSession -ConnectionUri $server -Credential $Credential -SessionOption $skipCertificate 
+```
 * In the **Synchronization Service Manager**, on **Management Agents** tab in **Actions** pane, click **Import Management Agent**.
 
 * Browse to the folder where you downloaded **LyncConnectorConfigExport.xml** and open the file. This will launch the **Create Management Agent** wizard.
