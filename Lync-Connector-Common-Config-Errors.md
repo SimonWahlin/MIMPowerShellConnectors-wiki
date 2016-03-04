@@ -1,6 +1,10 @@
+#### Win-RM Error code 403
+
+Check that URI for /OCSPowerShell contains both HTTPS:// and FQDN server name, so the link is HTTPS://server.domain.com/OCSPowerShell and not http://server/OCSPowerShell
+
 #### Access Denied
 
-If you get "Access Denied" errors when configuring the connector, make sure that there is no typo in the User and Domain fields and that you entered the correct password for the service account. Also confirm that this user has been granted remote management permission on the Lync admin servers and User Administrator privilege in Lync.
+If you get "Access Denied" errors when configuring the connector, make sure that there is no typo in the User and Domain fields and that you entered the correct password for the service account. Also confirm that this user has been granted remote management permission on the Lync admin servers and User Administrator privilege in Lync and Win RM was activated on the Lync server.
 
 #### Management object not found for identity "xxxx"
 
