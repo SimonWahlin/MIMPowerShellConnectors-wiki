@@ -92,7 +92,7 @@ Enable Export Password In First Pass|Unchecked|
 
 ![Lync Connector - Capabilities](https://github.com/Microsoft/MIMPowerShellConnectors/wiki/images/LyncConnector-Import-Page3b.png)
 
-> **Note**: Delta Import is based on the "WhenChanged" attribute which is neither replicated not indexed. Since it is not replicated, connector fetch all objects modified since T – LastRunDateTimeOffsetMinutes. The default value for LastRunDateTimeOffsetMinutes additional configuration parameter is 30 minutes. Even though the "WhenChanged" attribute is not indexed, it has been found to provides good performance gain during Delta Import.
+> **Note**: Delta Import is based on the "WhenChanged" attribute which is neither replicated nor indexed. Since it is not replicated, connector fetches all objects modified since T – LastRunDateTimeOffsetMinutes. The default value for LastRunDateTimeOffsetMinutes additional configuration parameter is 30 minutes. Even though the "WhenChanged" attribute is not indexed, it has been found to provides good performance gain during Delta Import.
 >
 > Any deletion directly in Lync / AD will not be detected in Delta Import. A periodic Full import is needed to flush out any external deletes from the connector space. Another approach that may be adopted is that since this connector is meant to be used in conjunction with AD MA, the deletions detected in AD MA can be used to trigger deletions in this Connector as well.
 
