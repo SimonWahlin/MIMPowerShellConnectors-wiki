@@ -5,7 +5,8 @@ To create the connector described in this section, configure the tabs in the Man
 The sample connctor uses a template file to provide schema information to the Synchronization Service. Create a text file in the Extension folder called SampleInputFile.txt.
 
 By default, the Extensions folder can be found at:
-    %ProgramFiles%\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions\. 
+
+    %ProgramFiles%\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions\
 
 ##Connectivity
 
