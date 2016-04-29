@@ -4,7 +4,7 @@
 	* [Setup and Configuration][LyncConnectorConfiguration]
 	* [Troubleshooting][LyncConnectorTroubleshooting]
 	* [Common Config Errors][LyncConnectorCommonConfigurationErrors]
-* [Flat File Connector]
+* Flat File Connector
 * Office365 Licensing Connector
 * SharePoint Site, User and Group Management Connector
 * Home Drive Provisioning
