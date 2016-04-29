@@ -16,7 +16,7 @@ Create a text file called InputFile.txt in the connector’s  MAData folder, and
 
 > 11;425-555-0199;206-555-0175;312-555-0194
 
-By default, the MAData folder can be found at:
+By default, the **MAData **folder can be found at:
 
     %ProgramFiles%\Microsoft Forefront Identity Manager\2010\Synchronization Service\MAData\ 
 
