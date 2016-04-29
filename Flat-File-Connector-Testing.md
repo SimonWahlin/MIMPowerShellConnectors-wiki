@@ -1,6 +1,7 @@
 Create a text file called InputFile.txt in the connector’s  MAData folder, and then paste the following sample data into it:
 
 > EmployeeID;OfficePhone;MobilePhone;FaxPhone
+
 > 100;425-555-0100;206-555-0101;
 
 > 101;425-555-0120;206-555-0105;312-555-0151
