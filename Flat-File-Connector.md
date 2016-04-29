@@ -71,9 +71,13 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 Keep the defaults as listed below.
 ![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0010.jpg)
 ##Select Object Types
-
+Select the Row Object Type as shown below.
+![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0025.jpg)
 ##Select Attributes
-
+Select each of the four attributes (EmployeeID, FaxPhone, MobilePhone, OfficePhone) as shown below.
+![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0026.jpg)
 ##Configure Anchors
-
+Specify the EmployeeID attribute as the Anchor attribute for the Row Object Type as shown below.
+![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0027.jpg)
 ##Run Profiles
+Once the connector has been created, create a run profile with a Full Import run step. Create an additional run profile with a Full Export run step. 
