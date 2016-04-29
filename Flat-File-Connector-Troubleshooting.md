@@ -21,16 +21,16 @@ Administrators can also configure the connector to log information produced by t
 ##Enabling Tracing
 1. Open the %ProgramFiles%\Microsoft Forefront Identity Manager\2010\Synchronization Service\bin\miiserver.exe.config file using a text editor. 
 2. Paste the following XML in to the file on the line immediately following the sources tag.
- `<source name="ConnectorsLog" switchValue="Verbose">
-       <listeners>
-             <add initializeData="C:\Logs\ConnectorsTrace.log"
-                   type="System.Diagnostics.TextWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-                   name="ConnectorsTraceListener">
+ `<source name="ConnectorsLog" switchValue="Verbose">`
+       `<listeners>`
+             `<add initializeData="C:\Logs\ConnectorsTrace.log"`
+                   `type="System.Diagnostics.TextWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`
+                   `name="ConnectorsTraceListener">`
 
-                   <filter type="" />
-             </add>
-       </listeners>
- </source> `
+                   `<filter type="" />`
+             `</add>`
+       `</listeners>`
+ `</source> `
 
  The <System.Diagnostics> section of the miiserver.exe.config file should now resemble the following excerpt:
 ![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0030.jpg)
