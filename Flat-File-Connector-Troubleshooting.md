@@ -42,8 +42,8 @@ Administrators can also configure the connector to log information produced by t
 
 ##PowerShell Script Tracing
 To trace information from Windows PowerShell scripts, you must complete two steps:
+
 1. Add logging to your scripts in the form of Write-Verbose, or Write-Debug statements. 
-2. Enable $VerbosePreference or $DebugPreference in the properties of the Run Step as show below. 
+2. Enable `$VerbosePreference` or `$DebugPreference` in the properties of the Run Step as shown below. 
 
 ![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0040.jpg)
-
