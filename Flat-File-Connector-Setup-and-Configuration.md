@@ -1,4 +1,4 @@
-#Configuration
+#Setup and Configuration
 To create the connector described in this section, configure the tabs in the Management Agent Designer as described in the  [Windows PowerShell Connector for FIM 2010 R2 Technical Reference](http://technet.microsoft.com/en-us/library/dn640417(v=ws.10).aspx).
 
 ##Template File
@@ -68,8 +68,7 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 | Encoding_Global | <blank> 
 
 ##Configure Partitions and Hierarchies
-Keep the defaults as listed below.
-![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0010.jpg)
+Preserve the defaults.
 ##Select Object Types
 Select the Row Object Type as shown below.
 ![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0025.jpg)
