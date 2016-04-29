@@ -3,8 +3,8 @@ Critical errors will be logged to the Application log on the Synchronization Ser
 
 #Event Log
 When a fatal error occurs while the PowerShell connector is running, or during the configuration of the connector in the Management Agent Designer, the Synchronization Service will log an event with the following details:
-| Parameter | Value
---- | --- |
+| Parameter | Value |
+| --- | --- |
 | Log | Application 
 | Level | Error 
 | Source | FIMSynchronizationService 
