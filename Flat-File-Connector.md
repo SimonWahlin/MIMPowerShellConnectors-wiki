@@ -68,7 +68,8 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 | Encoding_Global | <blank> 
 
 ##Configure Partitions and Hierarchies
-
+Keep the defaults as listed below.
+![](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/wiki/FlatFileConnector/Fig0010.jpg)
 ##Select Object Types
 
 ##Select Attributes
