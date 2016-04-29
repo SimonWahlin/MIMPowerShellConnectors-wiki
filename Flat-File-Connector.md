@@ -16,6 +16,17 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 | Server      | <blank> |
 | Domain      | <blank>      |
 | User | <blank>      |
+| Password | |
+| Impersonate Connector Account | |
+| Load User Profile When Impersonating | Unchecked 
+| Logon Type When Impersonating | None 
+| Signed Scripts Only | Unchecked 
+| Common Module Script Name (with extension) | xADSyncPSConnectorModule.psm1 
+| Common Module Script | Paste  AD Sync PS Connector Module code as value 
+| Validation Script | <blank> 
+| Schema Script | Paste  GetSchema code as value 
+| Additional Config Parameter Names | FileName,Delimiter,Encoding 
+| Additional Encrypted Config Parameter Names | <blank> 
 
 
 ##Capabilities
