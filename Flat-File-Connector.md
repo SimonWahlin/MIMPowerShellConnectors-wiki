@@ -12,12 +12,12 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 
 ##Connectivity
 | Parameter     | Value         |
-| ------------- |:-------------:| 
-| Server      | <blank> |
-| Domain      | <blank>      |
-| User | <blank>      |
-| Password | |
-| Impersonate Connector Account | |
+| ------------- |-------------| 
+| Server      | <blank>
+| Domain      | <blank>
+| User | <blank>      
+| Password | <blank> 
+| Impersonate Connector Account | Unchecked
 | Load User Profile When Impersonating | Unchecked 
 | Logon Type When Impersonating | None 
 | Signed Scripts Only | Unchecked 
