@@ -22,12 +22,11 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 | Logon Type When Impersonating | None 
 | Signed Scripts Only | Unchecked 
 | Common Module Script Name (with extension) | xADSyncPSConnectorModule.psm1 
-| Common Module Script | Paste  AD Sync PS Connector Module code as value 
+| Common Module Script | Paste  [AD Sync PS Connector Module code](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/src/Modules/xADSyncPSConnectorModule.psm1) as value 
 | Validation Script | <blank> 
-| Schema Script | Paste  GetSchema code as value 
+| Schema Script | Paste  [GetSchema code](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/src/FlatFileConnector/GetSchema.ps1) as value 
 | Additional Config Parameter Names | FileName,Delimiter,Encoding 
 | Additional Encrypted Config Parameter Names | <blank> 
-
 
 ##Capabilities
 
