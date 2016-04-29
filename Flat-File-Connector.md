@@ -11,7 +11,7 @@ By default, the Extensions folder can be found at:
 Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/src/FlatFileConnector/SampleInputFile.txt) in to SampleInputFile.txt.
 
 ##Connectivity
-| Parameter     | Value         |
+| Parameter     | Value       |
 | ------------- |-------------| 
 | Server      | <blank>
 | Domain      | <blank>
@@ -29,8 +29,43 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 | Additional Encrypted Config Parameter Names | <blank> 
 
 ##Capabilities
+| Parameter     | Value       |
+| ------------- |-------------| 
+| Distinguished Name Style | None
+| Export Type | ObjectReplace 
+| Data Normalization | None 
+| Object Confirmation | Normal 
+| Use DN as Anchor | Unchecked 
+| Concurrent Operations of Several Connectors | Checked 
+| Partitions | Unchecked 
+| Hierarchy | Unchecked 
+| Enable Import | Checked 
+| Enable Delta Import | Unchecked 
+| Enable Export | Checked 
+| Enable Full Export | Checked 
+| No Reference Values In First Export Pass | Unchecked 
+| Enable Object Rename | Unchecked 
+| Delete-Add As Replace | Checked 
+| Enable Password Operations | Unchecked 
+| Enable Export Password in First Pass | Checked 
 
 ##Global Parameters
+| Parameter     | Value       |
+| ------------- |-------------| 
+| Partition Script | <blank> 
+| Hierarchy Script | <blank> 
+| Begin Import Script | <blank> 
+| Import Script | Paste ImportData code as value 
+| End Import Script | <blank> 
+| Begin Export Script | <blank> 
+| Export Script Paste | ExportData code as value 
+| End Export Script | <blank> 
+| Begin Password Script | <blank> 
+| Password Extension Script | <blank> 
+| End Password Script | <blank> 
+| FileName_Global | InputFile.txt  
+| Delimiter_Global | ; 
+| Encoding_Global | <blank> 
 
 ##Configure Partitions and Hierarchies
 
