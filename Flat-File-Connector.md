@@ -11,6 +11,12 @@ By default, the Extensions folder can be found at:
 Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/src/FlatFileConnector/SampleInputFile.txt) in to SampleInputFile.txt.
 
 ##Connectivity
+| Parameter     | Value         |
+| ------------- |:-------------:| 
+| Server      | <blank> |
+| Domain      | <blank>      |
+| User | <blank>      |
+
 
 ##Capabilities
 
