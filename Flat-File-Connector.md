@@ -55,10 +55,10 @@ Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShell
 | Partition Script | <blank> 
 | Hierarchy Script | <blank> 
 | Begin Import Script | <blank> 
-| Import Script | Paste ImportData code as value 
+| Import Script | Paste [ImportData code](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/src/FlatFileConnector/ImportData.ps1) as value 
 | End Import Script | <blank> 
 | Begin Export Script | <blank> 
-| Export Script Paste | ExportData code as value 
+| Export Script | Paste [ExportData code](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/src/FlatFileConnector/ExportData.ps1) as value 
 | End Export Script | <blank> 
 | Begin Password Script | <blank> 
 | Password Extension Script | <blank> 
