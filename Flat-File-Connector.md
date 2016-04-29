@@ -2,11 +2,13 @@
 To create the connector described in this section, configure the tabs in the Management Agent Designer as described in the  [Windows PowerShell Connector for FIM 2010 R2 Technical Reference](http://technet.microsoft.com/en-us/library/dn640417(v=ws.10).aspx).
 
 ##Template File
-The sample connctor uses a template file to provide schema information to the Synchronization Service. Create a text file in the Extension folder called SampleInputFile.txt.
+The sample connector uses a template file to provide schema information to the Synchronization Service. Create a text file in the Extension folder called SampleInputFile.txt.
 
 By default, the Extensions folder can be found at:
 
     %ProgramFiles%\Microsoft Forefront Identity Manager\2010\Synchronization Service\Extensions\
+
+Paste the data located in [this file](https://github.com/Microsoft/MIMPowerShellConnectors/blob/master/src/FlatFileConnector/SampleInputFile.txt) in to SampleInputFile.txt.
 
 ##Connectivity
 
