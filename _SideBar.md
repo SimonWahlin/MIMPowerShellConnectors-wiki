@@ -1,5 +1,6 @@
 # MIM PowerShell Connectors Docs
 * [Home][Home]
+* [Related Projects][RelatedProjects]
 * [Skype/Lync Connector][LyncConnector]
 	* [Setup and Configuration][LyncConnectorConfiguration]
 	* [Troubleshooting][LyncConnectorTroubleshooting]
@@ -20,3 +21,4 @@
 [LyncConnectorTroubleshooting]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Lync-Connector-Troubleshooting
 [LyncConnectorCommonConfigurationErrors]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Lync-Connector-Common-Config-Errors
 [FAQ]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/FAQ
+[RelatedProjects]: https://github.com/Microsoft/MIMPowerShellConnectors/wiki/Related-Projects
