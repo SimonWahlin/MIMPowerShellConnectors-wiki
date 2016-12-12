@@ -303,7 +303,7 @@ When you configure an outbound synchronization rule, you need to configure an in
     </tr>
 </table>
 
-> **Note**: The above sample code assumes that you have extended the metaverse schema with an attribute **xActiveDirectoryDN** of type string (index) and an attribute **xSkypeEntitlement** of type boolean. The **xActiveDirectoryDN** attrbute is configured an import flow for it on the AD MA so that the it gets populated from the DN value from AD.
+> **Note**: The above sample code assumes that you have extended the metaverse schema with two attributes **xActiveDirectoryDN**  and **xSkypeEntitlement**, both of type string (index). The **xActiveDirectoryDN** attrbute is configured an import flow for it on the AD MA so that the it gets populated from the DN value from AD.
 
 
 ### Lync Connector Customization
