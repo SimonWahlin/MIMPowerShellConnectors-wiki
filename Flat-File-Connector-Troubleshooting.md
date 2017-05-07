@@ -2,7 +2,7 @@ The Windows PowerShell connector supports logging and tracing of connector and s
 
 Critical errors will be logged to the Application log on the Synchronization Service server and additional tracing can be enabled by the administrator. 
 
-#Event Log
+# Event Log
 When a fatal error occurs while the PowerShell connector is running, or during the configuration of the connector in the Management Agent Designer, the Synchronization Service will log an event with the following details:
 
 | Parameter | Value |
@@ -13,7 +13,7 @@ When a fatal error occurs while the PowerShell connector is running, or during t
 | Event ID | 6801 
 | Task Category | Server 
 
-#Logging/Tracing
+# Logging/Tracing
 The Windows PowerShell connector can be configured to emit tracing information to any .NET TraceListener (e.g. event log, XML file, text file, etc.).
 
 Administrators can also configure the connector to log information produced by the Write-Warning, Write-Verbose, and Write-Debug cmdlets to the trace log. 
